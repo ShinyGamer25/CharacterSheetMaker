@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Styles/Style.css">
+</head>
+<body>
+    
+
+        <h1>Character Sheet</h1>
+
+
+    <br>
+
+    <div class="CharacterInfo">
+        <form>
+            <label for="name">Name</label>
+            <br>
+            <input type="text" id="name" name="name">
+            <br>
+            <br>
+            <label for="age">Age</label>
+            <br>
+            <input type="number" id="age" name="age">
+            <br>
+
+
+            <div class="Races">
+                <br>
+            <label for="race">Race</label>
+            <br>
+            <select name="race" id="race">
+                <option value="human">Human</option>
+                <option value="elf">Elf</option>
+                <option value="dwarf">Dwarf</option>
+                <option value="orc">Orc</option>
+                <option value="dragonborn">Dragonborn</option>
+                <option value="tiefling">Tiefling</option>
+            </select>
+        </div>
+
+        <br>
+
+
+        <div id="CharacterClasses">
+            <label for="class">Class</label>
+            <br>
+            <select onchange="classSelected()" name="class" id="class">
+                <option value="fighter">Fighter</option>
+                <option value="wizard">Wizard</option>
+                <option value="rogue">Rogue</option>
+                <option value="barbarian">Barbarian</option>
+                <option value="druid">Druid</option>
+            </select>
+        </div>
+
+        <div id="chooseSpell" class="hide">
+            <label for="spells">Spells</label>
+            <br>
+            <input type="radio" name="spells" id=""> <label for="">Sleep</label>
+            <input type="radio" name="spells" id=""> <label for="">Magic Missile</label>
+            <input type="radio" name="spells" id=""> <label for="">Mage Armour</label>
+            <input type="radio" name="spells" id=""> <label for="">Ray of Sickness</label>
+
+            
+        </div>
+        </form>
+
+  
+    
+</body>
+</html>

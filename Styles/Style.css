@@ -1,0 +1,26 @@
+h1{
+    background-color: #BE9D6A;
+    display: flex;
+    justify-content: center;
+    border: black;
+    border-radius: 50px;
+    border-color: black;
+}
+
+body{
+    background-color: bisque;
+}
+
+.CharacterInfo{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.Races, .CharacterClasses{
+    text-align: center;
+}
+
+.hide{
+    display: none;
+}
