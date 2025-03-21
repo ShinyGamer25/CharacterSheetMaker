@@ -9,13 +9,17 @@
 <body>
     
 
-        <h1>Character Sheet</h1>
+
+
 
 
     <br>
 
     <div class="CharacterInfo">
-        <form>
+
+        <br>
+        <form action="">
+            <h1>Character Sheet</h1>
             <label for="name">Name</label>
             <br>
             <input type="text" id="name" name="name">
@@ -25,10 +29,28 @@
             <br>
             <input type="number" id="age" name="age">
             <br>
-
-
-            <div class="Races">
+            <br>
+            <div class="genderSelector">
+                <label for="gender">Gender</label>
                 <br>
+                <select onchange="genderSelected()" name="genderSelector" id="genderSelector">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <br>
+
+            <div id="otherGender" class="hide">
+                <label for="othergender">What is your gender?</label>
+                <br>
+                <input type="text" id="otherGender" name="otherGender">
+            </div>
+
+            <br>
+            
+            <div class="Races">
             <label for="race">Race</label>
             <br>
             <select name="race" id="race">
@@ -47,7 +69,7 @@
         <div id="CharacterClasses">
             <label for="class">Class</label>
             <br>
-            <select onchange="classSelected()" name="class" id="class">
+            <select onchange="classSelected()" name="" id="classSelector">
                 <option value="fighter">Fighter</option>
                 <option value="wizard">Wizard</option>
                 <option value="rogue">Rogue</option>
@@ -56,8 +78,10 @@
             </select>
         </div>
 
+        <br>
+
         <div id="chooseSpell" class="hide">
-            <label for="spells">Spells</label>
+            <label for="spells">Starting Spells</label>
             <br>
             <input type="radio" name="spells" id=""> <label for="">Sleep</label>
             <input type="radio" name="spells" id=""> <label for="">Magic Missile</label>
@@ -66,9 +90,18 @@
 
             
         </div>
+
+        <div id="chooseWeapon" class="hide">
+            <label for="weapons">Starting Weapons</label>
+            <br>
+            <input type="radio" name="weapons" id=""> <label for="">Longsword</label>
+            <input type="radio" name="weapons" id=""> <label for="">Shortsword</label>
+            <input type="radio" name="weapons" id=""> <label for="">Greatsword</label>
+            <input type="radio" name="weapons" id=""> <label for="">Bow</label>
+        </div>
         </form>
 
   
-    
+    <script src="../CharacterSheetMaker/Javascript/Code.js"></script>
 </body>
 </html>

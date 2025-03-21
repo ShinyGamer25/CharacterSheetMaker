@@ -1,20 +1,22 @@
-h1{
-    background-color: #BE9D6A;
-    display: flex;
-    justify-content: center;
-    border: black;
-    border-radius: 50px;
-    border-color: black;
-}
+
 
 body{
-    background-color: bisque;
+    background-color: white;
+    padding-left: 20%;
+    padding-right: 20%;
 }
 
 .CharacterInfo{
     display: flex;
     justify-content: center;
     text-align: center;
+    background-color: bisque;
+    padding: 20px;
+    border: 10px;
+    border-radius: 30px;
+    border-color: black;
+    border-style: double;
+    margin: 50px;
 }
 
 .Races, .CharacterClasses{
