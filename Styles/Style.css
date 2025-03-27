@@ -1,9 +1,13 @@
-
-
 body{
     background-color: white;
     padding-left: 20%;
     padding-right: 20%;
+    font-size: small;
+    transition: ease-in-out 300ms;
+}
+
+h1{
+    font-family: "press Start 2P";
 }
 
 .CharacterInfo{
@@ -16,7 +20,12 @@ body{
     border-radius: 30px;
     border-color: black;
     border-style: double;
-    margin: 50px;
+    margin: 10px;
+    font-family: "press Start 2P";
+}
+
+select option{
+    font-family: "press Start 2P";
 }
 
 .Races, .CharacterClasses{
@@ -25,4 +34,54 @@ body{
 
 .hide{
     display: none;
+}
+
+img{
+    height: 30%;
+    width: 30%;
+    margin-top: 10px;
+    border: 5px;
+    border-radius: 1px;
+    border-color: black;
+    border-style: solid;
+}
+
+button{
+    font-family: "press Start 2P";
+    font-size: small;
+    border-radius: 1px;
+    border-color: black;
+    border-style: solid;
+    padding: 5px;
+}
+
+button:hover{
+    color: white;
+    background-color: black;
+    border-color: white;
+    transition: ease-in-out 100ms;
+}
+
+button:active{
+    color: black;
+    background-color: white;
+    border-color: black;
+}
+
+/*styling form elements. text boxes, number box, etc. - https://stackoverflow.com/questions/20765310/best-way-to-style-a-textbox-in-css*/
+
+input[type="text"], textarea{
+    border-radius: 1px;
+    border-color: black;
+    border-style: solid;
+}
+
+input[type="number"], textarea{
+    border-radius: 1px;
+    border-color: black;
+    border-style: solid;
+}
+
+.genderSelector{
+    font-family: "press Start 2P";
 }

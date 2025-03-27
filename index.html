@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="Styles/Style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
-<body>
+<body id="body">
     
 
 
@@ -20,6 +21,10 @@
         <br>
         <form action="">
             <h1>Character Sheet</h1>
+            <br>
+            <label for="darkmode">Dark Mode?</label> <input onchange="DarkMode()" type="checkbox" id="darkBox" name="darkBox">
+            <br>
+            <br>
             <label for="name">Name</label>
             <br>
             <input type="text" id="name" name="name">
@@ -34,26 +39,20 @@
                 <label for="gender">Gender</label>
                 <br>
                 <select onchange="genderSelected()" name="genderSelector" id="genderSelector">
+                    <option value="selectGender">Select Gender</option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
-                    <option value="other">Other</option>
                 </select>
             </div>
 
             <br>
 
-            <div id="otherGender" class="hide">
-                <label for="othergender">What is your gender?</label>
-                <br>
-                <input type="text" id="otherGender" name="otherGender">
-            </div>
-
-            <br>
             
             <div class="Races">
             <label for="race">Race</label>
             <br>
-            <select name="race" id="race">
+            <select onchange="raceSelected()" name="race" id="raceSelector">
+                <option value="selectRace">Select Race</option>
                 <option value="human">Human</option>
                 <option value="elf">Elf</option>
                 <option value="dwarf">Dwarf</option>
@@ -63,6 +62,14 @@
             </select>
         </div>
 
+        
+
+            <div>
+                <img src="" alt="" class="hide">
+            </div>
+            
+
+
         <br>
 
 
@@ -70,6 +77,7 @@
             <label for="class">Class</label>
             <br>
             <select onchange="classSelected()" name="" id="classSelector">
+                <option value="selectClass">Select Class</option>
                 <option value="fighter">Fighter</option>
                 <option value="wizard">Wizard</option>
                 <option value="rogue">Rogue</option>
@@ -83,22 +91,63 @@
         <div id="chooseSpell" class="hide">
             <label for="spells">Starting Spells</label>
             <br>
-            <input type="radio" name="spells" id=""> <label for="">Sleep</label>
-            <input type="radio" name="spells" id=""> <label for="">Magic Missile</label>
-            <input type="radio" name="spells" id=""> <label for="">Mage Armour</label>
-            <input type="radio" name="spells" id=""> <label for="">Ray of Sickness</label>
+            <input type="radio" name="wizardSpell" id="w1" value="Sleep" onclick="showName(this)"> <label for="">Sleep</label>
+            <input type="radio" name="wizardSpell" id="w2" value="Magic Missile" onclick="showName(this)"> <label for="">Magic Missile</label>
+            <input type="radio" name="wizardSpell" id="w3" value="Mage Armour" onclick="showName(this)"> <label for="">Mage Armour</label>
+            <input type="radio" name="wizardSpell" id="w4" value="Ray of Sickness" onclick="showName(this)"> <label for="">Ray of Sickness</label>
 
             
         </div>
 
-        <div id="chooseWeapon" class="hide">
+        <div id="chooseWeaponFighter" class="hide">
             <label for="weapons">Starting Weapons</label>
             <br>
-            <input type="radio" name="weapons" id=""> <label for="">Longsword</label>
-            <input type="radio" name="weapons" id=""> <label for="">Shortsword</label>
-            <input type="radio" name="weapons" id=""> <label for="">Greatsword</label>
-            <input type="radio" name="weapons" id=""> <label for="">Bow</label>
+            <input type="radio" name="weapons" id="" value="Longsword" onclick="showName(this)"> <label for="">Longsword</label>
+            <input type="radio" name="weapons" id="" value="Shortsword" onclick="showName(this)"> <label for="">Shortsword</label>
+            <input type="radio" name="weapons" id="" value="Greatsword" onclick="showName(this)"> <label for="">Greatsword</label>
+            <input type="radio" name="weapons" id="" value="Bow" onclick="showName(this)"> <label for="">Bow</label>
         </div>
+
+        <div id="chooseWeaponRogue" class="hide">
+            <label for="weapons">Starting Weapons</label>
+            <br>
+            <input type="radio" name="weapons" id="" value="Dagger" onclick="showName(this)"> <label for="">Dagger</label>
+            <input type="radio" name="weapons" id="" value="Crossbow" onclick="showName(this)"> <label for="">Crossbow</label>
+            <input type="radio" name="weapons" id="" value="Shortsword" onclick="showName(this)"> <label for="">Shortsword</label>
+            <input type="radio" name="weapons" id="" value="Rapier" onclick="showName(this)"> <label for="">Rapier</label>
+        </div>
+
+        <div id="chooseWeaponBarbarian" class="hide">
+            <label for="weapons">Starting Weapons</label>
+            <br>
+            <input type="radio" name="weapons" id="" value="Greathammer" onclick="showName(this)"> <label for="">Greathammer</label>
+            <input type="radio" name="weapons" id="" value="Greataxe" onclick="showName(this)"> <label for="">Greataxe</label>
+            <input type="radio" name="weapons" id="" value="Longsword" onclick="showName(this)"> <label for="">Longsword</label>
+            <input type="radio" name="weapons" id="" value="Greatsword" onclick="showName(this)"> <label for="">Greatsword</label>
+        </div>
+
+        <div id="chooseSpellDruid" class="hide">
+            <label for="spells">Starting Spells</label>
+            <br>
+            <input type="radio" name="spells" id="" value="Speak With Animals" onclick="showName(this)"> <label for="">Speak With Animals</label>
+            <input type="radio" name="spells" id="" value="Faerie Fire" onclick="showName(this)"> <label for="">Faerie Fire</label>
+            <input type="radio" name="spells" id="" value="Detect Magic" onclick="showName(this)"> <label for="">Detect Magic</label>
+            <input type="radio" name="spells" id="" value="Cure Wounds" onclick="showName(this)"> <label for="">Cure Wounds</label>
+        </div>
+
+        <br>
+
+        <button type="button" name="submitButton" onclick="handleSubmit(event)">Submit</button>
+        
+        <div id="submitSheet" class="hide">
+            <h3>Your name is <span id="name-output"></span></h3>
+            <p>You are <span id="age-output"></span> years old</p>
+            <p>your gender is <span id="gender-output"></span></p>
+            <p>your race is <span id="race-output"></span></p>
+            <p>your class is <span id="class-output"></span></p>
+        </div>
+
+        <div id="radioOutput"></div>
         </form>
 
   
